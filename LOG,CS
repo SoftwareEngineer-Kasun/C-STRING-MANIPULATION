@@ -1,0 +1,26 @@
+string[] Words = TextInPut.Split(' ').Except(ARRAY CONTAIN LIST).ToArray();
+Regex.IsMatch(TextInPut, string.Format(@"\b{0}\b", "kasun"))
+Regex.IsMatch(TextInPut, string.Format(@"\b{0}\b", @"(?=good\s([\S*\s*]*song|music))"))
+Regex.IsMatch(TextInPut, string.Format(@"\b{0}\b", @"(?=january (\d{2}))(?=.*\s)"))
+string.IsNullOrEmpty(TextInPut)
+Regex.IsMatch("[A-TVWZ]", TextInPut))//NON LETERS
+Match match = Regex.Match(x, @".*meaning of (.*?)(\s|$)"); //match for next value
+if(match.Groups[1].Value == "") //if null match
+                {
+                    
+                    return;
+                }
+
+//WEBCLIENT
+try{
+WebClient client = new WebClient();
+string downloadString = client.DownloadString("http://googledictionaryapi.eu-gb.mybluemix.net/?define=" + Words[Term]);
+}
+catch (WebException Error404)
+                {
+                 
+                    HttpWebResponse webResponse = (HttpWebResponse)Error404.Response;
+         
+                    if (webResponse.StatusCode == HttpStatusCode.NotFound){}
+                    else{throw;} }
+   
