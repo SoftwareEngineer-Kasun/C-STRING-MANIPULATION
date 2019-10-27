@@ -12,6 +12,7 @@ if(match.Groups[1].Value == "") //if null match
                 }
 
 //WEBCLIENT
+using System.Net;
 try{
 WebClient client = new WebClient();
 string downloadString = client.DownloadString("http://googledictionaryapi.eu-gb.mybluemix.net/?define=" + Words[Term]);
