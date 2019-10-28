@@ -4,6 +4,10 @@ Regex.IsMatch(TextInPut, string.Format(@"\b{0}\b", @"(?=good\s([\S*\s*]*song|mus
 Regex.IsMatch(TextInPut, string.Format(@"\b{0}\b", @"(?=january (\d{2}))(?=.*\s)"))
 string.IsNullOrEmpty(TextInPut)
 Regex.IsMatch("[A-TVWZ]", TextInPut))//NON LETERS
+line = line.Replace("+++$+++","\n");//replace
+Regex.IsMatch(line, "[^\x00 -\x80]+")//non english
+line = line.TrimStart('-');//remove
+
 Match match = Regex.Match(x, @".*meaning of (.*?)(\s|$)"); //match for next value
 if(match.Groups[1].Value == "") //if null match
                 {
